@@ -1,15 +1,14 @@
-import "./App.css";
-import Weather from "./Weather";
-
-function App() {
+import React from "react";
+import Search from "./Search";
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Hello World!</h1>
-        <Weather />
-      </header>
+      <h1>Weather App</h1>
+      <Search />
+      <p>
+        Open source code by{" "}
+        <a href="https://https://github.com/Katalia91">Natalia Kur</a>
+      </p>{" "}
     </div>
   );
 }
-
-export default App;
