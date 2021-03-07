@@ -7,7 +7,7 @@ export default function App() {
       <Search />
       <p>
         Open source code by{" "}
-        <a href="https://https://github.com/Katalia91">Natalia Kur</a>
+        <a href="https://github.com/Katalia91">Natalia Kur</a>
       </p>{" "}
     </div>
   );
