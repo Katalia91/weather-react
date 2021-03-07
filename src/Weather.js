@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function Weather() {
+export default function Weather(props) {
   return (
     <div className="Weather">
-      <h1 id="current-city">Oslo</h1>
+      <h1 id="current-city">{props.city}</h1>
       <ul className="daily-conditions">
         <li className="last-update">Last updated: Sunday, 20:56</li>
         <span id="current-date"></span>
