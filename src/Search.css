@@ -9,8 +9,8 @@ li {
   font-size: 1.3em;
 }
 
-body {
-  text-align: center;
+ul {
+  margin-bottom: 30px;
 }
 
 h3 {
@@ -20,8 +20,88 @@ h3 {
 form {
   margin-bottom: 30px;
 }
-.App {
-  margin-top: 50px;
-  display: block;
+
+.btn-light {
+  background: #d38bcd;
+  border: none;
+  color: white;
+  font-weight: 600;
+  width: 100%;
+}
+.search-form {
+  width: 100%;
+}
+.form-control {
+  width: 100%;
+}
+h1 {
+  margin-top: 30px;
+  color: #ff9d72;
+}
+h4 {
+  font-size: 20px;
+}
+strong {
+  color: #ff9d72;
+  font-size: 2em;
+}
+
+.conditions,
+.daily-conditions {
+  list-style: none;
+  line-height: 1;
+}
+
+.last-update {
+  text-align: left;
+}
+.consecutive-days {
+  font-size: 1.5em;
+  margin: 3em 2em 1.5em 2em;
   text-align: center;
+}
+
+.temperature {
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  float: left;
+  margin-top: 0;
+  font-size: 64px;
+}
+.units {
+  position: relative;
+  top: -4px;
+}
+
+.weather-icon {
+  margin: 0 auto;
+  padding: 0;
+  float: left;
+  width: 64px;
+  height: 64px;
+}
+.weather-conditions .active {
+  color: #ffffff;
+  cursor: default;
+  font-size: 20px;
+  text-decoration: none;
+}
+.weather-conditions .active:hover {
+  text-decoration: none;
+}
+#description {
+  font-size: 22px;
+  margin-top: 7px;
+
+  text-align: left;
+}
+#description:first-letter {
+  text-transform: capitalize;
+}
+#current-city {
+  margin-bottom: 15px;
+}
+#submit-button {
+  width: 100%;
 }

@@ -1,54 +1,33 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Search.css";
-import axios from "axios";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function Weather() {
-  let [city, setCity] = useState(" ");
-  let [info, setInfo] = useState(" ");
-  let [text, setText] = useState(" ");
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    let apiKey = `5c3ee28f0359086dde5610bde74e2870`;
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(url).then(showWeather);
-  }
-
-  function updateCity(event) {
-    setCity(event.target.value);
-  }
-
-  function showWeather(response) {
-    setText(<h3>Currently in {city}:</h3>);
-    setInfo(
-      <ul>
-        <li>Temperature: {Math.round(response.data.main.temp)}℃</li>
-        <li>Description: {response.data.weather[0].description}</li>
-        <li>Humidity: {response.data.main.humidity}%</li>
-        <li>Wind: {response.data.wind.speed} m/s</li>
-        <li>
-          {" "}
-          <img
-            src={`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`}
-            alt="weather"
-          />
-        </li>
-      </ul>
-    );
-  }
-
+export default function Search() {
   return (
     <div className="Search">
-      <form onSubmit={handleSubmit}>
-        <input
-          type="search"
-          placeholder="Type in the city"
-          onChange={updateCity}
-        />
-        <input type="submit" value="Search" />
+      <form className="search-form mb-3" id="search-window">
+        <div className="row">
+          <div className="col-12 col-md-7 mb-3 mb-sm-0">
+            <input
+              type="search"
+              class="form-control"
+              id="search-input"
+              placeholder="Type in a city..."
+              autoFocus="true"
+              autoComplete="false"
+            />
+          </div>
+
+          <div className="col-6 col-md-3">
+            <input
+              type="submit"
+              className="form-control btn btn-light"
+              id="submit-button"
+              value="Search"
+            />
+          </div>
+        </div>
       </form>
-      {text}
-      {info}
     </div>
   );
 }

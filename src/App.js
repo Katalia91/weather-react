@@ -1,14 +1,16 @@
 import React from "react";
 import Search from "./Search";
+import Weather from "./Weather";
+import Footer from "./Footer";
+import "./App.css";
 export default function App() {
   return (
     <div className="App">
-      <h1>Weather App</h1>
-      <Search />
-      <p>
-        Open source code by{" "}
-        <a href="https://github.com/Katalia91">Natalia Kur</a>
-      </p>{" "}
+      <div className="container">
+        <Search />
+        <Weather />
+      </div>
+      <Footer />
     </div>
   );
 }

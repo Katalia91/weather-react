@@ -1,0 +1,14 @@
+.Footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: rgba(244, 244, 244, 0.5);
+  margin: -1em auto 1em;
+}
+a {
+  color: #f7cfbf;
+  text-decoration: none;
+}
+a:hover {
+  color: #f3af94;
+  text-decoration: none;
+}
